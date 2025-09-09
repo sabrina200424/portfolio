@@ -1,0 +1,10 @@
+
+body{
+    background-image: url(assets/images/webpage-background.jpg);
+    background-repeat: repeat-x;
+}
+
+
+.container{
+    max-width: 800px;
+}
