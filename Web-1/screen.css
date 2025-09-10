@@ -6,5 +6,9 @@ body{
 
 
 .container{
-    max-width: 800px;
+    width: 800px;
+}
+
+.heading{
+    background-image: url(assets/images/webpage-header.jpg);
 }
