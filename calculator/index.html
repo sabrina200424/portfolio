@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+
+<html lang= "en" xml:lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title> Javascript Calculator </title>
+        <meta name="description" content="This is a page to a calculator made by javascript">
+        <meta name="author" content="Sabrina Kabir">
+        <link rel="stylesheet" href="assets/style/style.css">
+
+    </head>
+
+    <body>
+        <form id="myform">
+            <div class="formcontainer" onsubmit="return false">
+            <h1>Javascript Calculator</h1>
+            <fieldset id="detail">
+                <legend>Calculator</legend>
+                <br>
+                <label class="formlabel" for="Operand1">Operand 1:</label>
+                <input type="text" id="Operand1" name="Operand1" size="15" maxlength="15">
+                <label class="error" for="Operand1" id="Operand1Error"></label>
+                <br>
+                <br>
+                <label class="formlabel">Operator: </label>
+                <label for="AddOperator">
+                    <input type="radio" name="Operator" id="AddOperator" value="Add">
+                    +
+                </label>
+                <label for="SubtractOperator">
+                    <input type="radio" name="Operator" id="SubtractOperator" value="Minus">
+                    -
+                </label>
+                <label for="MultiplyOperator">
+                    <input type="radio" name="Operator" id="MultiplyOperator" value="Multiply">
+                    *
+                </label>
+                <label for="DivideOperator">
+                    <input type="radio" name="Operator" id="DivideOperator" value="Divide">
+                    /
+                </label>
+                <br>
+                <br>
+                <label class="formlabel" for="Operand2">Operand 2:</label>
+                <input type="text" id="Operand2" name="Operand2" size="15" maxlength="15">
+                <label class="error" for="Operand2" id="Operand2Error"></label>
+                <br>
+                <br>
+                <label class="formlabel" for="Operand3">Operand 3:</label>
+                <input type="text" id="Operand3" name="Operand3" size="15" maxlength="15">
+                <label class="error" for="Operand3" id="Operand3Error"></label>
+                <br>
+                <br>
+                <label class="formlabel">Result: </label>
+                <span id="Result"></span>
+                <br>
+                <br>
+                <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
+                <input type="button" value="Clear" name="Clear" onclick="clearform();">
+            </fieldset>
+        </div>
+        </form>
+        <script src="assets/scripts/script.js"></script>
+    </body>
+</html>
