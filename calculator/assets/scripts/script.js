@@ -66,19 +66,19 @@ function calculate(){
 
         let result; 
 
-        if (operand == "AddOperator") {
+        if (operator == "Add") {
             result = operand1fp+operand2fp; 
         }
 
-        if (operand == "SubtractOperator") {
+        if (operator == "Minus") {
             result = operand1fp-operand2fp
         }
 
-        if (operand == "MultiplyOperator") {
-            result = operand1fp*operand2fp
+        if (operator == "Multiply") {
+            result = operand1fp * operand2fp
         }
 
-        if (operand == "DivideOperator") {
+        if (operator == "Divide") {
             result = operand1fp/operand2fp
         }
 
