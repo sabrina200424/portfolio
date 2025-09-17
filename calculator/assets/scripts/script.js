@@ -1,9 +1,9 @@
+
 function calculate(){
-    "use strict"
+    "use strict"; 
 
     document.getElementById("Operand1Error").innerHTML = ""; 
     document.getElementById("Operand2Error").innerHTML = ""; 
-    document.getElementById("Operand3Error").innerHTML = ""; 
     document.getElementById("OperatorError").innerHTML = ""; 
     document.getElementById("Result").innerHTML = ""; 
 
@@ -86,7 +86,8 @@ function calculate(){
 
 
 
-    }
+    
+}
 
 }
 
