@@ -1,21 +1,32 @@
-  /* .v1 {
-    border-left: 6px dotted #FA6B60;
-    height: 860px; 
-    left: 50%; 
-    margin-left: 162px;
-    top: 90;
-
-  }
-
- .h1 {
-    border-top: 4px solid #65A0F7;
-    width: 1340px; 
-    padding-bottom: 50px;
-    
- } */
+ 
 
   
+ 
 
+
+ section nav ul {
+   display: flex; 
+   flex-direction: row;
+   justify-content: space-evenly;
+   list-style-type: none;  
+   
+
+ }
+
+
+ section nav ul a {
+   background-color: #0d5d85;
+   text-decoration: none;
+   padding-top: 12px;
+   padding-bottom: 12px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 8px;
+   color: #fffdf9;
+   font-size: 1.2rem;
+
+ }
+  
 
  .title{
   display: flex;
@@ -25,11 +36,92 @@
    
  }
 
+ 
+
 .heading{
-   background-color: #faf8a4/*#f7f699dc*/;
-   color: rgb(170, 126, 69);
-   padding-bottom: 20px;
-   padding-left: 20px;
+   background-color: #ffae2d;        /*#f7f699dc*/ /* orange -yellow FCDB6D*/
+   color: #852f08/*rgb(170, 126, 69)*/;
+   padding-bottom: 35px;
+   padding-left: 7px;
+   padding-right: 7px; 
+   border-radius: 14px;
    display: flex; 
    justify-content: center;
 }
+
+.firstrectangle{
+   height: 50px; 
+   width: 180px; 
+   background-color: #1a60a1; /*B9DC5F*//*fdb3b2e3*/ 
+   background-position: 14px;
+   transform: rotate(138deg);
+   position:fixed; 
+   top: 30px; 
+   left: -31px; 
+   
+   /* 8d0a36 - magenta*/
+   /* lilac - f1b3ff*/
+   /*orange - FFAA33 */ 
+   /*magenta - #985277*/
+}
+
+
+.secondrectangle{
+   height: 50px; 
+   width: 180px; 
+   background-color: #0d5d85; /*B9DC5F*//*fdb3b2e3*/ 
+   background-position: 14px;
+   transform: rotate(138deg);
+   position:fixed; 
+   top: 108px; 
+   right: -40px; 
+
+}
+
+
+.h1 {
+    border-top: 8px dotted #3d76cc;
+    width: 210px; 
+    padding-bottom: 50px;
+    background-position: 14px;
+    position: fixed; 
+    top: 370px; 
+    left: 120px; 
+
+  }
+
+  
+ /* .headerline{
+   height: 10px; 
+   width: 1350px; 
+   background-color: #852f08;
+   background-position: 40px;
+   position: fixed; 
+   top: 190px; 
+
+}  */
+
+
+body{
+   background-color: #fffdf9;
+}
+
+
+
+/* background colors
+
+b75d69 - Orchid purple
+e5989b - Pink purple
+ffbf69   ff9b54  ffd48f- Peach
+ff8c61 - Salmon pink
+
+
+rectangle colors
+
+#b35d8a - purple
+#023047 - navy blue
+
+#d46103 - dark orange (for heading) 
+
+
+*/
