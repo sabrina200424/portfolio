@@ -1,5 +1,7 @@
 /* hCLLtUWPlxfyMPT83fNod6BpTh1EdGe_ */
 
+let myChart = null; 
+
 async function ShowResults(){
 
     "use strict"; 
@@ -71,8 +73,13 @@ async function ShowResults(){
                     stockdate[i] = tempdate.toLocaleDateString();
                 }
             }
+
+       if (myChart !== null){
+           myChart.destroy();
+       }
+
     var ctx = document.getElementById("chartjs-0");
-    var myChart = new Chart(ctx, {
+     myChart = new Chart(ctx, {
         "type":"line",
         "data": {
             "labels": stockdate,
@@ -101,8 +108,14 @@ async function ShowResults(){
 function clearform() {
     document.getElementById("BaseCurrency").value = ""; 
     document.getElementById("ConvertToCurrency").value = ""; 
-    document.getElementById("FromDate").innerHTML = ""; 
-    document.getElementById("ToDate").innerHTML = ""; 
+    document.getElementById("FromDate").value = ""; 
+    document.getElementById("ToDate").value = ""; 
+
+    if (myChart !== null){
+        myChart.destroy(); 
+        myChart = null; 
+    }
+
 }
 
 
