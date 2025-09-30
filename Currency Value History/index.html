@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Currency Value History </title>
+        <meta name="description" content="This is a currency value history project made through Javascript">
+        <meta name="author" content="Sabrina Kabir">
+        <script src="assets/scripts/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery.min.js/3.5.1/jquery.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script> -->
+
+    </head>
+
+
+    <body>
+        <form id="myform">
+            <div class="formcontainer">
+            <h1><strong>Currency Value History</strong></h1>
+            <fieldset id="detail">
+                <br>
+                <label class="formlabel" for="BaseCurrency"><strong>Base Currency:</strong></label>
+                <!-- <input type="text" id="BaseCurrency" name="BaseCurrency" size="15" maxlength="15"> -->
+                <select id="BaseCurrency" name="BaseCurrency">
+                    <option value="">Choose a base currency --></option>
+                    <option value="USD">US Dollar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="CAD">Canadian Dollar</option>
+                    <option value="SGD">Singaporean Dollar</option>
+                    <option value="CHF">Swiss Franc</option>
+                </select>
+                <label class="error" for="BaseCurrency" id="BaseCurrencyError"></label>
+                <br>
+                <br>
+                <label class="formlabel" for="ConvertToCurrency"><strong>Convert to Currency:</strong></label>
+                <!-- <input type="text" id="ConvertToCurrency" name="ConvertToCurrency" size="15" maxlength="15"> -->
+                <select id="ConvertToCurrency" name="ConvertToCurrency">
+                    <option value="">Choose a convert to currency --></option>
+                    <option value="USD">US Dollar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="CAD">Canadian Dollar</option>
+                    <option value="SGD">Singaporean Dollar</option>
+                    <option value="CHF">Swiss Franc</option>
+                </select>
+                <label class="error" for="ConvertToCurrency" id="ConvertToCurrencyError"></label>
+                <br>
+                <br>
+                <label class="formlabel" for="FromDate"><strong>From Date:</strong></label>
+                <input type="date" id="FromDate" name="FromDate" size="15" maxlength="15">
+                <label class="error" for="FromDate" id="FromDateError"></label>
+                <br>
+                <br>
+                <label class="formlabel" for="ToDate"><strong>To Date:</strong></label>
+                <input type="date" id="ToDate" name="ToDate" size="15" maxlength="15">
+                <label class="error" for="ToDate" id="ToDateError"></label>
+                <br>
+                <br>
+                <input type="button" value="Show Results" name="Show Results" onclick="ShowResults();">
+                <input type="button" value="Clear" name="Clear" onclick="clearform();">
+            </fieldset>
+        <canvas id="chartjs-0" width="400" height="400"></canvas>
+        </div>
+        </form>
+        
+
+    </body>
+</html>
