@@ -1,5 +1,9 @@
  
-
+.container {
+    width: 95wv;
+    max-width: 1100px;
+    margin: 80px auto;
+  }
   
  
 
@@ -23,7 +27,7 @@
    padding-right: 10px;
    border-radius: 8px;
    color: #fffdf9;
-   font-size: 1.2rem;
+   font-size: 1.0rem;
 
  }
   
@@ -32,15 +36,15 @@
   display: flex;
   justify-content: center;
   padding-top: 40px;
-  font-size: 40px;
+  font-size: 38px;
    
  }
 
  
 
 .heading{
-   background-color: #ffae2d;        /*#f7f699dc*/ /* orange -yellow FCDB6D*/
-   color: #852f08/*rgb(170, 126, 69)*/;
+   background-color: #ff930f;        /*#f7f699dc*/ /* orange -yellow FCDB6D*/ /*previous banner (orange) - ffae2d*/
+   color: #861501; /*rgb(170, 126, 69) 852b01 - brown */
    padding-bottom: 35px;
    padding-left: 7px;
    padding-right: 7px; 
@@ -52,11 +56,11 @@
 .firstrectangle{
    height: 50px; 
    width: 180px; 
-   background-color: #1a60a1; /*B9DC5F*//*fdb3b2e3*/ 
+   background-color: #1a60a1; /*B9DC5F*//*fdb3b2e3*/ /*208b3a - green*/ /*87a330 - olive green*/
    background-position: 14px;
    transform: rotate(138deg);
-   position:fixed; 
-   top: 30px; 
+   position:relative; 
+   top: -670px; 
    left: -31px; 
    
    /* 8d0a36 - magenta*/
@@ -72,10 +76,25 @@
    background-color: #0d5d85; /*B9DC5F*//*fdb3b2e3*/ 
    background-position: 14px;
    transform: rotate(138deg);
-   position:fixed; 
-   top: 108px; 
-   right: -40px; 
+   position:relative; 
+   top: -650px; 
+   left: 1180px; 
 
+}
+
+
+.introduction{
+   
+   background-position: 4px;
+   padding-top: 130px;
+   padding-right: 120px;
+   padding-left: 460px;
+   padding-bottom: 80px;
+   font-size: 16px;
+   /* background-color: #023e8a; */
+   /* margin-left: 340px;
+   margin-right: 220px; */
+   
 }
 
 
@@ -84,9 +103,20 @@
     width: 210px; 
     padding-bottom: 50px;
     background-position: 14px;
-    position: fixed; 
-    top: 370px; 
-    left: 120px; 
+    position: relative;
+    top: -240px; 
+    left: 90px; 
+
+  }
+
+  .h2 {
+    border-top: 8px dotted #0f5c0d;
+    width: 210px; 
+    padding-bottom: 50px;
+    background-position: 14px;
+    position: relative;
+    top: -20px; 
+    left: 90px; 
 
   }
 
@@ -104,6 +134,7 @@
 
 body{
    background-color: #fffdf9;
+   font-family:Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 

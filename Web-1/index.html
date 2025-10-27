@@ -7,30 +7,97 @@
         <meta name="description" content="This page displays an example of an HTML/CSS homework.">
         <meta name="author" content="Sabrina Kabir">
         <link rel="stylesheet" href="screen.css">
-
+        
    </head>
 
 
-    <body>
+<body>
 
+    <div class="container">
     <header class="heading">
     <h1 class="title">Sabrina Kabir</h1>
     </header>
 
-
+   
 
     <div class="tabs">
-    <button class="tabopen" onlick="openUALR">UALR</button>
-    <button class="tabopen" onlick="coursehomePage">Course Home Page</button>
-    <button class="tabopen" onlick="openW3C">W3C</button>
-    <button class="tabopen" onlick="openlittleRock">Little Rock</button>
+    <button class="tabopen" onclick="openUALR(event, 'https://ualr.edu/')">UALR</button>
+    <button class="tabopen" onclick="openCourseHomePage(event, 'https://sabrina200424.github.io/portfolio/')">Course Home Page</button>
+    <button class="tabopen" onclick="openW3C">W3C</button>
+    <button class="tabopen" onclick="openLittleRock">Little Rock</button>
     </div>
 
 
-    <h1>My Assessment</h1>
+   <script>
+    function openUALR(event, UALR) {
+        window.open(UALR, '_blank'); 
+    }
+   </script>
+
+   <script>
+    function openCourseHomePage(event, CourseHomePage) {
+        window.open(CourseHomePage, '_blank'); 
+    }
+   </script>
+
+
+   
+    <div class="rectangle">
+
+    <h2 class="titlewriting">My Assessment</h2>
+    <p class="first">The most important goal of effective communication is clarity. 
+        Clarity is not the same as simplicity. Often, simple things are clear if the message
+        is intended to be brief and small, but often the message is about a complex
+        relationship that can only be presented with a necessarily large amount of data.   
+    </p>
+    <p class="image"><img src="assets/images/webpage-image.jpg" alt="WebPage"></p> 
+    <p class="alert">
+        This complexity can be made to appear clear by effective organization and 
+        presentation and need not be reduced to meaningless "bite-sized" chunks of data, 
+        as simplification usually does. 
+    </p>
+    <p class="third">
+        Clarity refers to the focus on one particular message or goal at a time, rather than 
+        attempting to accomplish too much at once. Simplicity is often responsible for the 
+        "dumbing" of information rather than the illumination of it.
+    </p>
+    <h3 class="questions">Questions</h3>
+    <p class="fourth">
+        Please answer the following questions below. Remember to markup the information properly
+        using HTML 
+    </p>
+    <h4 class="questiontitles">Explain the difference between the "alt" attribute
+        and the "title" attribute. 
+    </h4>
+    <p class="answers">
+        The title attribute acts to provide more context to a text. The alt attribute 
+        provides more context to an image. 
+    </p>
+    <h4 class="questiontitles">Please provide an example of how to mark up a definition from the 
+        dictionary below
+    </h4>
+    <p class="answers">
+        To mark up a definition from a dictionary you can use the strong element to make the 
+        words bold, so the reader could understand what the term is. 
+    </p>
+    <h4 class="questiontitles">Provide an example of a link pointing to your favorite site
+    </h4>
+    <p class="answers">
+        <a href="https://www.pinterest.com/" title="Here is a link to my favorite website.">Pinterest</a>
+    </p>
+    
+
+<footer id="footer">
+    <h6 class="back-to-top"><strong> &copy; 2025 Sabrina Kabir -  </strong><a href="#top"> Back to top</a></h6>
+
+</footer>
+
+    </div>
 
 
 </body>
+
+
 
 
 

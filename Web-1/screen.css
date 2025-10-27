@@ -1,24 +1,140 @@
 
 body{
     background-image: url(assets/images/webpage-background.jpg);
-    background-repeat: repeat-x;
+    background-repeat: repeat-x; 
+    background-size:contain; 
+    font-family:'Times New Roman', Times, serif;
+    width: 800px;
+    
+
 }
 
 
+.tabs{
+    background-color: black;
+    margin-left: 18px;
+    margin-right: 18px;
+    border-top: none;
+}
+
+.tabs button{
+    background-color: black;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-left: 12px;
+    font-size: 15px;
+    color: azure;
+    border: none;
+}
+
+.tabs button:hover{
+    background-color: rgb(222, 218, 230);
+    color: black;
+}
+
+.tabs button:active{
+    background-color: rgb(46, 5, 194);
+}
+
+.rectangle{
+    background-color: rgb(251, 253, 255);
+    margin-left: 18px;
+    margin-right: 18px;
+    border: 1px solid white;
+}
+
  .container{
     width: 800px;
+    margin-left: 280px;
+    margin-right: 400px;
+    
 } 
 
 .heading{
     background-image: url(assets/images/webpage-header.jpg);
     padding-top: 90px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 18px;
 }
 
 .title{
     display: flex;
     justify-content: center;
+    margin: 0px;
+    color: black;
 }
 
-.h1{
-    background-color: antiquewhite;
+h2{
+    color: rgb(3, 3, 204);
+    margin-left: 40px;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+h3{
+    color: rgb(3, 3, 204);
+    margin-left: 40px;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+h4{
+    color: rgb(59, 109, 248);
+    margin-left: 40px;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+.first{
+    margin-left: 40px;
+    padding-right: 300px;
+}
+
+ .image{
+    float: right;
+    margin-top: -120px;
+    margin-right: 20px;
+    background-color: black;
+    border: 2px solid black; 
+} 
+
+.alert{
+    margin-left: 40px;
+    margin-right: 220px;
+    padding-right: 180px;
+    color: rgb(191, 198, 231);
+    background-color: rgb(92, 92, 151);
+    font-size: 16px;
+}
+
+.third{
+    margin-left: 40px;
+    padding-right: 100px; 
+}
+
+.fourth{
+    margin-left: 40px;
+    padding-right: 100px; 
+}
+
+.answers{
+    margin-left: 40px;
+    padding-right: 100px; 
+}
+
+#footer{
+    color:blanchedalmond; 
+    background-color: black;
+    margin-left: 00px;
+    padding-right: 100px; 
+    padding-left: 30px;
+    margin-bottom: -25px;
+
+}
+
+#footer a{
+    color: rgb(255, 255, 255);
 }
