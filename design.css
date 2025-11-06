@@ -1,6 +1,6 @@
  
 .container {
-    /* width: 95wv; */
+   
     max-width: 1300px;
     margin: 80px auto;
     margin-top: 30px; 
@@ -58,7 +58,27 @@
    justify-content: center;
 }
 
-.firstrectangle{
+
+.tabs{
+  background-color: #25aa20;
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.tabopen{
+  background-color: #911802;
+  color:#ffffff;
+  text-decoration: none;
+
+}
+
+
+.tabopen:hover{
+  background-color: #073f88;
+}
+
+
+ .firstrectangle{
    height: 50px; 
    width: 180px; 
    background-color: #1a60a1; /*B9DC5F*//*fdb3b2e3*/ /*208b3a - green*/ /*87a330 - olive green*/
@@ -82,8 +102,6 @@
    width: 180px; 
    background-color: #0d5d85; /*B9DC5F*//*fdb3b2e3*/ 
    transform: rotate(138deg);
-   margin-top: -635px; 
-   margin-right: -31px;
    float:right;
 
 }
@@ -92,58 +110,37 @@
 
 .introduction{
    
-   /* background-position: 4px; */
    
    background-color: #007599;
    color: #ffffff;
    border: 4px dashed #073f88; 
    border-radius: 3px;
-   margin-top: 140px;
+   margin-top: 100px;
    margin-left: 450px;
    margin-right: 100px;
    padding-top: 40px;
    padding-right: 80px;
    padding-left: 80px;
    padding-bottom: 40px;
-   font-size: 16px;
-   /* background-color: #023e8a; */
-   /* margin-left: 340px;
-   margin-right: 220px; */
+   font-size: 15px;
    
 }
 
 
-.dot1 {
-    border-top: 8px dotted #0a8805;
-    width: 300px; 
-    /* padding-bottom: 50px;
-    margin-top: -460px;  */
-    margin-left: 40px;  
 
-  }
+  
 
-  .dot2 {
-    border-top: 8px dotted #0a8805;
-    width: 300px; 
-    /* padding-bottom: 50px;
-    margin-top: 230px; */
-    margin-left: 40px;  
-
-  }
-
-  .image img{
+  .image {
    height: 300px; 
    width: 300px; 
-   /* float: left; 
-   margin-top: -70px;*/
-   margin-left: 40px; 
+   border: 8px dotted #0a8805;
+   float: left; 
+   margin-left: 45px;
+   margin-top: 60px; 
+   
   }
 
-  .imagelayout{
   
-  margin-top: -700px;
-  margin-left: 180px;
-} 
 
 
   .skillset{
@@ -178,7 +175,29 @@
   font-size: 25px;
 }
   
+h4{
+  display: flex; 
+  justify-items: center; 
+  margin-left: 620px;
+  margin-top: 90px; 
+  color: #b8530b; /*d66413*/
+  font-size: 25px; 
 
+}
+
+
+.resume{
+  display: flex; 
+  justify-content: center;
+  background-color: #f16900; /*ff6d00 */
+  border-radius: 6px;
+  border: 4px dotted #911802;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color:#ffffff; 
+}
  
 
   
