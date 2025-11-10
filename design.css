@@ -12,35 +12,12 @@
 }
 
 
-
- section nav ul {
-   display: flex; 
-   flex-direction: row;
-   justify-content: space-evenly;
-   list-style-type: none;  
-   
-
- }
-
-
- section nav ul a {
-   background-color: #0d5d85;
-   text-decoration: none;
-   padding-top: 12px;
-   padding-bottom: 12px;
-   padding-left: 10px;
-   padding-right: 10px;
-   border-radius: 8px;
-   color: #fffdf9;
-   font-size: 1.0rem;
-
- }
   
 
  .title{
   display: flex;
   justify-content: center;
-  padding-top: 40px;
+  
   font-size: 38px;
    
  }
@@ -50,6 +27,7 @@
 .heading{
    background-color: #ff930f;        /*#f7f699dc*/ /* orange -yellow FCDB6D*/ /*previous banner (orange) - ffae2d*/
    color: #911802; /*rgb(170, 126, 69) 852b01 - brown */
+   padding-top: 40px;
    padding-bottom: 35px;
    padding-left: 7px;
    padding-right: 7px; 
@@ -60,28 +38,36 @@
 
 
 .tabs{
-  background-color: #25aa20;
   display:flex;
   justify-content: space-evenly;
 }
 
 .tabopen{
-  background-color: #911802;
+  background-color: #1c8bb8;
   color:#ffffff;
   text-decoration: none;
+  font-size: 16px; 
+  padding: 20px; 
+  border-radius: 14px;
+
 
 }
 
 
 .tabopen:hover{
-  background-color: #073f88;
+  background-color: #073f88; 
+}
+
+
+.tabopen.active{
+  background-color: #3c0663;
 }
 
 
  .firstrectangle{
    height: 50px; 
    width: 180px; 
-   background-color: #1a60a1; /*B9DC5F*//*fdb3b2e3*/ /*208b3a - green*/ /*87a330 - olive green*/
+   background-color: #1a60a1; /*B9DC5F*//*fdb3b2e3*/  /*87a330 - olive green*/
    transform: rotate(138deg);
    /* background-position: 14px;
    position:relative;  */
@@ -186,7 +172,7 @@ h4{
 }
 
 
-.resume{
+#resume{
   display: flex; 
   justify-content: center;
   background-color: #f16900; /*ff6d00 */
