@@ -52,7 +52,7 @@ body{
 
 /* Programming Links */
 
-section nav ul{
+/* section nav ul{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -70,4 +70,100 @@ section nav ul a{
     padding-right: 10px;
     border-radius: 8px;
     font-size: 1.0rem;
+} */
+
+
+/* Programming section  */
+
+.image{
+    height: 200px; 
+    width: 300px; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px solid rgb(59, 30, 6);
+    
 }
+
+ul{
+    float: left; 
+    margin-left: 45px;
+    margin-top: 60px; 
+    list-style-type: none;
+}
+
+
+.description{
+    
+   color: #ffffff; 
+   background-color: #14213d;
+   border: 2px dashed #6b7a99;
+   margin-top: 100px;
+   margin-left: 450px;
+   margin-right: 100px;
+   padding-top: 40px;
+   padding-right: 80px;
+   padding-left: 80px;
+   padding-bottom: 40px;
+   font-size: 15px;
+}
+
+.description a{
+    color: #c2acff;
+}
+
+
+/* End of programming section */
+
+
+/* Cover Letter Section */
+
+
+.coverletter{
+    color: #ffffff;
+    background-color: #14213d;
+    border: 4px double #6f80a5;  /* #4f628b */
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    padding-top: 30px;
+    margin-top: 60px;  
+    margin-left: 280px;
+    margin-right: 280px; 
+
+}
+
+/* End of Cover Letter section */
+
+
+/* Skills and written section */
+
+.writingintroduction{
+    color: #ffffff;
+    background-color: #27143d;
+    margin-top: 50px;
+    padding: 50px;
+    margin-left: 140px; 
+    margin-right: 140px;
+}
+
+.writingintroduction a{
+    color: #b3acd1;
+}
+
+
+.presentationintroduction{
+    color: #ffffff;
+    background-color: #27143d;
+    margin-top: 40px;
+    padding: 50px;
+    margin-left: 140px; 
+    margin-right: 140px;
+}
+
+.presentationintroduction a{
+    color: #b3acd1;
+}
+
+
+
+/* End of skills and written section */
