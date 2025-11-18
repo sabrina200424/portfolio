@@ -9,33 +9,12 @@ async function ShowResults(){
     // let apiKey =
     let ZipCode = document.getElementById("ZipCode").value; 
     let chosenDate = document.getElementById("chosenDate").value; 
-    
-
-    let originalDate = new Date(chosenDate); 
-   // originalDate.toISOString().split('T')[0]
-   let s = originalDate.toISOString().split('T')[0]
-    
-    let afterFive = new Date(originalDate); 
-    afterFive.setDate(originalDate.getDate() + 5); 
-
-    let m = afterFive.toISOString().split('T')[0]
-
-    //afterFive.toISOString().split('T')[0]
-
-    let beforeFive = new Date(originalDate); 
-    beforeFive.setDate(originalDate.getDate() - 5);
-    
-    let j = beforeFive.toISOString().split('T')[0]
-
-   // beforeFive.toISOString().split('T')[0]
-
-
-
+     
     document.getElementById("ZipCodeError").innerHTML = ""; 
     document.getElementById("chosenDateError").innerHTML = ""; 
 
 
-    let errorflag= false; 
+    let errorflag = false; 
 
 
 
@@ -49,6 +28,29 @@ async function ShowResults(){
         errorflag = true; 
     }
 
+
+    let originalDate = new Date(chosenDate); 
+   // originalDate.toISOString().split('T')[0]
+   let s = originalDate.toISOString().split('T')[0]
+    
+    let afterFive = new Date(originalDate); 
+    afterFive.setDate(originalDate.getDate() + 5); 
+
+    let lastDate = afterFive.toISOString().split('T')[0]
+
+    //afterFive.toISOString().split('T')[0]
+
+    let beforeFive = new Date(originalDate); 
+    beforeFive.setDate(originalDate.getDate() - 5);
+    
+    let initialDate = beforeFive.toISOString().split('T')[0]
+
+   // beforeFive.toISOString().split('T')[0]
+
+
+
+  
+
     let myurl = "https://geocoding-api.open-meteo.com/v1/search?name=" + ZipCode + "&count=1&language=en&format=json"
     let msg1Object = await fetch(myurl);
 
@@ -61,7 +63,7 @@ async function ShowResults(){
             let latitude = msg1.results[0].latitude; 
             let longitude = msg1.results[0].longitude; 
           //  let myurlx = "https://geocoding-api.open-meteo.com/v1/search?name=" + ZipCode + "&count=1&language=en&format=json"
-            let myurl2 = "https://api.open-meteo.com/v1/forecast?latitude=" + latitude + "&longitude=" + longitude + "&hourly=uv_index&start_date=" + j + "&end_date=" + m
+            let myurl2 = "https://api.open-meteo.com/v1/forecast?latitude=" + latitude + "&longitude=" + longitude + "&hourly=uv_index&start_date=" + initialDate + "&end_date=" + lastDate
             let msg2Object = await fetch(myurl2);
 
 
@@ -127,7 +129,7 @@ async function ShowResults(){
 
 
     if(myChart !== null){
-        myChart.destroy(); 
+        myChart.destroy();
         mychart = null; 
     }
 
