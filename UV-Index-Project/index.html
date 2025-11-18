@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title> UV Index Data Chart </title>
+        <meta name="description" content="This is a UV Index Data Chart">
+        <meta name="author" content="Sabrina Kabir">
+        <script src="assets/scripts/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery.min.js/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="assets/style/design.css">
+
+    </head>
+
+    <body>
+        <form id="myform">
+            <div class="formcontainer">
+            <h1><strong>UV Index Data Chart</strong></h1>
+            <fieldset id="detail">
+                <br>
+                <label class="formlabel" for="ZipCode"><strong>Zip Code: </strong></label>
+                <input type="text" id="ZipCode" name="ZipCode" size="5" maxlength="5">
+                <label class="error" for="ZipCode" id="ZipCodeError"></label>
+                <br>
+                <br>
+                <label class="formlabel" for="chosenDate"><strong> Date:</strong></label>
+                <input type="date" id="chosenDate" name="chosenDate" size="15" maxlength="15">
+                <label class="error" for="chosenDate" id="chosenDateError"></label>
+                <br>
+                <br>
+                <input type="button" value="Show Results" name="Show Results" onclick="ShowResults();">
+                <input type="button" value="Clear" name="Clear" onclick="clearform();">
+            </fieldset>
+        <canvas id="chartjs-0" width="400" height="400"></canvas>
+        </div>
+        </form>
+    </body>
+</html>
