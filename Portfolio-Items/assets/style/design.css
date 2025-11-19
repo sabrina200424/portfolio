@@ -118,7 +118,7 @@ ul{
    color: #ffffff; 
    background-color: #14213d;
    border: 2px dashed #6b7a99;
-   margin-top: 135px;
+   margin-top: 160px;
    margin-left: 450px;
    margin-right: 100px;
    padding-top: 40px;
@@ -130,6 +130,25 @@ ul{
 
 .description-two a{
     color: #ccbaff;
+}
+
+.description-three{
+    color: #ffffff; 
+   background-color: #14213d;
+   border: 2px dashed #6b7a99;
+   margin-top: 100px;
+   margin-left: 450px;
+   margin-right: 100px;
+   padding-top: 40px;
+   padding-right: 80px;
+   padding-left: 80px;
+   padding-bottom: 40px;
+   font-size: 15px;
+}
+
+.description-three a{
+    color: #ccbaff;
+
 }
 
 

@@ -25,8 +25,8 @@
  
 
 .heading{
-   background-color: #ff930f;        /*#f7f699dc*/ /* orange -yellow FCDB6D*/ /*previous banner (orange) - ffae2d*/
-   color: #911802; /*rgb(170, 126, 69) 852b01 - brown */
+   background-color: #ff930f;         
+   color: #911802; 
    padding-top: 40px;
    padding-bottom: 35px;
    padding-left: 7px;
@@ -180,7 +180,7 @@ h4{
   justify-items: center;
   background-color:#ff7b0f;
   border: 3px dashed #af6f0e; 
-  color: #8d3004; 
+  color: #742704; 
   margin-left: 90px; 
   margin-right: 90px;
   padding-top: 20px; 
@@ -192,7 +192,7 @@ h4{
 }
 
 #contact-info a{
-  color:#373fad;
+  color:#63050a;
 }
 
 
