@@ -2,18 +2,16 @@
 .container {
    
     max-width: 1300px;
-    margin: 80px auto;
-    margin-top: 30px; 
+    /* margin: 20px auto; */
   }
   
  body{
-   background-color: #ffffff;
+   background-color: #fff0f3;
    font-family:Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 
   
-
  .title{
   display: flex;
   justify-content: center;
@@ -25,8 +23,9 @@
  
 
 .heading{
-   background-color: #ff930f;         
+   background-color: #ffc2d9;         
    color: #911802; 
+   margin-top: 2px;
    padding-top: 40px;
    padding-bottom: 35px;
    padding-left: 7px;
@@ -40,11 +39,13 @@
 .tabs{
   display:flex;
   justify-content: space-evenly;
+  background-color: #7c131a;
 }
 
 .tabopen{
-  background-color: #1c8bb8;
+  
   color:#ffffff;
+  background-color: #7c131a;
   text-decoration: none;
   font-size: 16px; 
   padding: 20px; 
@@ -55,12 +56,12 @@
 
 
 .tabopen:hover{
-  background-color: #073f88; 
+  background-color: #c9184A; 
 }
 
 
-.tabopen.active{
-  background-color: #3c0663;
+.tabopen:active{
+  background-color: #d62e5e;
 }
 
 
@@ -97,11 +98,11 @@
 .introduction{
    
    
-   background-color: #007599;
-   color: #ffffff;
-   border: 4px dashed #073f88; 
+   background-color: #fccce2;
+   color: #911802;
+   border: 4px dashed #a1073d; 
    border-radius: 3px;
-   margin-top: 100px;
+   margin-top: 81px;
    margin-left: 450px;
    margin-right: 100px;
    padding-top: 40px;
@@ -119,7 +120,7 @@
   .image {
    height: 300px; 
    width: 300px; 
-   border: 7px dotted #0a8805;
+   border: 5px dotted #a1073d;
    float: left; 
    margin-left: 45px;
    margin-top: 60px; 
@@ -134,43 +135,43 @@
    flex-direction: row;
    justify-content: space-evenly;
    list-style-type: none; 
-   background-color: #7cc754;
-   margin-left: -25px; 
-   margin-right: -25px;
+   background-color: #c75463;
+   margin-left: 120px; 
+   margin-right: 120px;
  }
 
  .skillset li{
    color: #ffffff;
-   background-color: #4da021;
+   background-color: #a13140;
    padding-right: 6px;
    padding-left: 6px;
    padding-top: 6px;
    padding-bottom: 6px;
    border-radius: 4px;
-   border: 2px inset #25aa20; 
+   border: 2px inset #95192a; 
    margin-top: 26px; 
    margin-bottom: 26px;
  }
 
  .skillset li:hover{
-  box-shadow: 5px 5px #1e8f1a;
+  box-shadow: 5px 5px #840c1c;
  }
 
  h3{
   display: flex;
   justify-items: center;
-  margin-left: 620px;
+  margin-left: 560px;
   margin-top: 120px;
-  color: #317e08; 
+  color: #a13140; 
   font-size: 25px;
 }
   
 h4{
   display: flex; 
   justify-items: center; 
-  margin-left: 620px;
+  margin-left: 564px;
   margin-top: 90px; 
-  color: #b8530b; /*d66413*/
+  color: #a13140; /*d66413*/
   font-size: 25px; 
 
 }
@@ -178,21 +179,22 @@ h4{
 #contact-info{
   display: flex; 
   justify-items: center;
-  background-color:#ff7b0f;
-  border: 3px dashed #af6f0e; 
-  color: #742704; 
-  margin-left: 90px; 
-  margin-right: 90px;
+  background-color:#7c131a;
+  border: 3px dashed #7c0515; 
+  color: #ffffff; 
+  margin-left: -10px; 
+  margin-right: -10px;
+  margin-bottom: -10px;
   padding-top: 20px; 
   padding-bottom: 20px; 
   padding-right: 20px; 
-  padding-left: 20px; 
+  padding-left: 60px; 
   font-size: 17px;
   
 }
 
 #contact-info a{
-  color:#63050a;
+  color:#ffd1d3fb;
 }
 
 

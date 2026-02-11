@@ -1,18 +1,18 @@
 
 .container{
     max-width: 1300px;
-    margin: 80px auto; 
-    margin-top: 30px;
+    /* margin: 80px auto; 
+    margin-top: 30px; */
 }
 
 
 body{
-    background-color: #ffffff;
+    background-color: #fff0f3;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .heading{
-    background-color: #ff930f;
+    background-color: #ffc2d9;
     color: #911802; 
     padding-top: 40px;
     padding-bottom: 35px;
@@ -31,11 +31,12 @@ body{
 .tabs{
     display: flex;
     justify-content: space-evenly;
+    background-color: #7c131a;
 }
 
 
 .tabopen{
-    background-color: #1c8bb8;
+    background-color: #7c131a;
     color: #ffffff;
     text-decoration: none;
     font-size: 16px; 
@@ -44,7 +45,11 @@ body{
 }
 
 .tabopen:hover{
-    background-color: #073f88; 
+    background-color: #c9184A; 
+}
+
+.tabopen:active{
+    background-color: #d62e5e;
 }
 
 
