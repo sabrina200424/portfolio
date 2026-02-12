@@ -169,32 +169,36 @@
 h4{
   display: flex; 
   justify-items: center; 
+  padding-top: 20px;
   margin-left: 564px;
   margin-top: 90px; 
-  color: #a13140; /*d66413*/
+  color: #ffd7dc; /*d66413*/
   font-size: 25px; 
 
 }
 
+
+.contact-information{
+  background-color:#7c131a;
+  margin-right: -10px;
+  margin-bottom: -10px;
+  padding-bottom: 8px;
+ }
+
+
 #contact-info{
   display: flex; 
   justify-items: center;
-  background-color:#7c131a;
-  border: 3px dashed #7c0515; 
   color: #ffffff; 
   margin-left: -10px; 
-  margin-right: -10px;
-  margin-bottom: -10px;
-  padding-top: 20px; 
-  padding-bottom: 20px; 
   padding-right: 20px; 
-  padding-left: 60px; 
+  padding-left: 60px;  
   font-size: 17px;
   
 }
 
 #contact-info a{
-  color:#ffd1d3fb;
+  color:#ffd7dc;
 }
 
 
