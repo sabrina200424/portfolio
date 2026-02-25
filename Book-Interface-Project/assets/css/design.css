@@ -1,0 +1,73 @@
+
+
+body{
+    background-color: #d6b598;
+    background-image: linear-gradient(to bottom, #d6b598, #a67b5b);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+#myform{
+    background-color: #faeed5;
+    border: #b28f70 solid 4px;
+    width: 948px;
+    margin: 20px auto; 
+    text-align: center;
+}
+
+
+#detail{
+    border: #dfc3ab solid 3px; 
+    margin-left: 40px; 
+    margin-right: 40px; 
+}
+
+.formlabel{
+    color: #4b2700; 
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+h1{
+    color:#54301d; 
+    font-size: 32px;
+}
+
+h3{
+    color: #4b2700;
+}
+
+#BookTitle{
+    margin-left: 40px;
+}
+
+#AuthorName{
+    margin-left: 4px;
+}
+
+input[type=submit]{
+    background-color: #815738;
+    color: #fff8e8;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 4px auto;
+}
+
+input[type=reset]{
+    background-color: #eccbb3;
+    color:#31190c;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 100px;
+}
+
+input[type=text]{
+    border:#9f714d solid 2px;
+    color:#431e0a; 
+    font-size: 16px;
+}
+
