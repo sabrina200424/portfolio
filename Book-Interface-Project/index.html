@@ -1,0 +1,52 @@
+<!Doctype html>
+
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8">
+        <title>Book Interface</title>
+        <meta name="description" content="This is my capstone II final project where I developed a book searching interface">
+        <meta name="author" content="Sabrina Kabir">
+        <script src="assets/js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery.min.js/3.5.1/jquery.min.js"></script>
+        <link rel="stylsheet" href="assets/css/design.css">
+
+    </head>
+
+    <body>
+        <main>
+            <form id="myform">
+                <div class="formcontainer">
+                    <h1><strong>Book Interface</strong></h1>
+                    <h3><strong>Please enter one of the following boxes down below</strong></h3>
+                    <fieldset id="detail">
+                        <br>
+                        <label class="formlabel" for="BookTitle"><strong>Book Title: </strong></label>
+                        <input type="text" id="BookTitle" name="BookTitle" size="40" max-length="80">
+                        <label class="error" for="BookTitle" id="BookTitleError"></label>
+                        <br>
+                        <br>
+                        <label class="formlabel" for="AuthorName"><strong>Author's Name: </strong></label>
+                        <input type="text" id="AuthorName" name="AuthorName" size="40" max-length="80">
+                        <label class="error" for="AuthorName" id="AuthorNameError"></label>
+                        <br>
+                        <br>
+                        <label class="formlabel" for="GeneralSubject"><strong>General Subject: </strong></label>
+                        <input type="text" id="GeneralSubject" name="GeneralSubject" size="40" max-length="80">
+                        <label class="error" for="GeneralSubject" id="GeneralSubjectError"></label>
+                        <br>
+                        <br>
+                        <input type="submit" value="Show Results" name="Show Results" onclick="ShowResults();">
+                        <input type="reset" value="Clear" name="Clear" onclick="ClearForm();">
+                    </fieldset>
+                    <canvas id="chartjs-0" width="400" height="400"></canvas>
+                </div>
+            </form>
+        </main>
+    </body>
+
+
+
+</html>
