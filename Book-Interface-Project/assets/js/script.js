@@ -18,7 +18,7 @@ async function ShowResults(){
     // document.getElementById("GeneralSubjectError").innerHTML = ""; 
 
 
-    let errorflag = false; 
+    // let errorflag = false; 
     let textCount = 0; 
 
     if(BookTitle == "" && AuthorName == "" && GeneralSubject== ""){
@@ -27,17 +27,54 @@ async function ShowResults(){
     } 
 
 
-    if(BookTitle !== null)
+    if(BookTitle !== "")
+    {
+
+        textCount++;
+        
+        
+          let myurl = "https://openlibrary.org/search.json?title=" + BookTitle
+          let msg1Object = await fetch(myurl); 
+
+          if (msg1Object.status >= 200 && msg1Object.status <= 299) {
+            const msg1JSONText = await msg1Object.text(); 
+            const msg1 = JSON.parse(msg1JSONText);
+
+            let author_name = msg1.docs[0].author_name[0]; 
+            let title = msg1.docs[0].title; 
+            let first_publish_year = msg1.docs[0].first_publish_year; 
+
+            let authorlist = "";
+            for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
+                authorlist += msg1.docs[0].author_name[i] + "<br>";
+            }
+            document.getElementById("Author").innerHTML = authorlist;
+            
+            return
+
+          }
+
+
+
+
+            
+
+
+           
+
+            
+
+            
+
+    }     
+    
+
+    if(AuthorName !== "")
     {
         textCount++; 
     }
 
-    if(AuthorName !== null)
-    {
-        textCount++; 
-    }
-
-    if(GeneralSubject !== null)
+    if(GeneralSubject !== "")
     {
         textCount++; 
     }
@@ -45,23 +82,24 @@ async function ShowResults(){
     if(textCount > 1)
     {
         alert("Please enter information in only one box"); 
+        return;
     }
 
 
-    //  if(BookTitle !== null && AuthorName !== null){
-    //     alert("Please input only one of the boxes.");
-    //     errorflag = true;
-    // }
- 
-
-    
-
-
+   
 
 
 
 }
 
+
+
+
+ //  if(BookTitle !== null && AuthorName !== null){
+    //     alert("Please input only one of the boxes.");
+    //     errorflag = true;
+    // }
+ 
 
 
 
