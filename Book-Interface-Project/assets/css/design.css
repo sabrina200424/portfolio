@@ -1,8 +1,8 @@
 
 
 body{
-    background-color: #d6b598;
-    background-image: linear-gradient(to bottom, #d6b598, #a67b5b);
+    background-color: #c19f82;
+    /* background-image: linear-gradient(to bottom, #d6b598, #a67b5b); */
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
@@ -73,5 +73,12 @@ input[type=text]{
 
 
 alert{
+    font-size: 18px;
+}
+
+
+#Author{
+    margin: 15px; 
+    padding: 20px;
     font-size: 18px;
 }

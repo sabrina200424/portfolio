@@ -43,13 +43,20 @@ async function ShowResults(){
             let author_name = msg1.docs[0].author_name[0]; 
             let title = msg1.docs[0].title; 
             let first_publish_year = msg1.docs[0].first_publish_year; 
+           // let cover_i = msg1.docs[0].cover_i; 
+            let cover_edition_key = msg1.docs[1].cover_edition_key; 
+
+            let CoverImage = "https://covers.openlibrary.org/a/olid/" + cover_edition_key + ".jpg"
 
             let authorlist = "";
             for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
                 authorlist += msg1.docs[0].author_name[i] + "<br>";
             }
             document.getElementById("Author").innerHTML = authorlist;
-            
+            document.getElementById("Title").innerHTML = title; 
+            document.getElementById("PublishedYear").innerHTML = first_publish_year; 
+            document.getElementById("BookCover").innerHTML = CoverImage; 
+
             return
 
           }
