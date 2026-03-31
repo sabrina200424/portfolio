@@ -60,16 +60,7 @@ async function ShowResults(){
             return
 
           }
-
-
-
-
-            
-
-
-           
-
-            
+        
 
             
 
@@ -106,6 +97,7 @@ async function ShowResults(){
         
     }
 
+    
     if(GeneralSubject !== "")
     {
         textCount++; 
@@ -190,10 +182,15 @@ function ClearForm() {
     document.getElementById("GeneralSubject").value = ""; 
 
 
-    if (myChart !== null){
-        myChart.destroy(); 
-        myChart = null; 
-    } 
+    // if (myChart !== null){
+    //     myChart.destroy(); 
+    //     myChart = null; 
+    // } 
+
+    document.getElementById("Author").innerHTML =  "";
+    document.getElementById("Title").innerHTML = ""; 
+    document.getElementById("PublishedYear").innerHTML = ""; 
+    document.getElementById("BookCover").innerHTML = ""; 
 
 
 }
