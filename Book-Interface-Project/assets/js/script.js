@@ -187,10 +187,10 @@ function ClearForm() {
     //     myChart = null; 
     // } 
 
-    document.getElementById("Author").innerHTML =  "";
-    document.getElementById("Title").innerHTML = ""; 
-    document.getElementById("PublishedYear").innerHTML = ""; 
-    document.getElementById("BookCover").innerHTML = ""; 
+    document.getElementById("Author").value =  "";
+    document.getElementById("Title").value = ""; 
+    document.getElementById("PublishedYear").value = ""; 
+    document.getElementById("BookCover").value = ""; 
 
 
 }
