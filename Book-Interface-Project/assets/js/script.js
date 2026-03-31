@@ -52,10 +52,10 @@ async function ShowResults(){
             for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
                 authorlist += msg1.docs[0].author_name[i] + "<br>";
             }
-            document.getElementById("Author").innerHTML = authorlist;
-            document.getElementById("Title").innerHTML = title; 
-            document.getElementById("PublishedYear").innerHTML = first_publish_year; 
-            document.getElementById("BookCover").src = CoverImage; 
+            document.getElementById("Author").innerHTML = "Author Name: " + authorlist;
+            document.getElementById("Title").innerHTML = "Book Title: " + title; 
+            document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
+            document.getElementById("BookCover").innerHTML = CoverImage; 
 
             return
 
@@ -95,9 +95,9 @@ async function ShowResults(){
             for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
                 authorlist += msg1.docs[0].author_name[i] + "<br>";
             }
-            document.getElementById("Author").innerHTML = authorlist;
-            document.getElementById("Title").innerHTML = title; 
-            document.getElementById("PublishedYear").innerHTML = first_publish_year; 
+            document.getElementById("Author").innerHTML = "Author's Name: " + authorlist;
+            document.getElementById("Title").innerHTML = "Book Title: " + title; 
+            document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
            
 
             return
@@ -126,8 +126,8 @@ async function ShowResults(){
                 authorlist += msg1.docs[0].author_name[i] + "<br>";
             }
             document.getElementById("Author").innerHTML = "Author name: " + authorlist;
-            document.getElementById("Title").innerHTML = title; 
-            document.getElementById("PublishedYear").innerHTML = first_publish_year; 
+            document.getElementById("Title").innerHTML = "Book Title: " + title; 
+            document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
            
 
             return
