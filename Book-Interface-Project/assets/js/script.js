@@ -18,7 +18,7 @@ async function ShowResults(){
     // document.getElementById("GeneralSubjectError").innerHTML = ""; 
 
 
-    // let errorflag = false; 
+    let errorflag = false; 
     let textCount = 0; 
 
     if(BookTitle == "" && AuthorName == "" && GeneralSubject== ""){
@@ -46,7 +46,7 @@ async function ShowResults(){
            // let cover_i = msg1.docs[0].cover_i; 
             let cover_edition_key = msg1.docs[1].cover_edition_key; 
 
-            let CoverImage = "https://covers.openlibrary.org/a/olid/" + cover_edition_key + ".jpg"
+            let CoverImage = "https://covers.openlibrary.org/b/olid/" + cover_edition_key + "-L.jpg"
 
             let authorlist = "";
             for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
@@ -55,9 +55,9 @@ async function ShowResults(){
             document.getElementById("Author").innerHTML =  authorlist;
             document.getElementById("Title").innerHTML = "Book Title: " + title; 
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
-            document.getElementById("BookCover").innerHTML = CoverImage; 
+            document.getElementById("BookCover").src = CoverImage; 
 
-            return
+            
 
           }
         
@@ -91,7 +91,7 @@ async function ShowResults(){
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
            
 
-            return
+            
 
         }
         
@@ -122,7 +122,7 @@ async function ShowResults(){
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
            
 
-            return
+            
 
         }
     }
