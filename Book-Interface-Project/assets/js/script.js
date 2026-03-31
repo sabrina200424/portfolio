@@ -52,7 +52,7 @@ async function ShowResults(){
             for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
                 authorlist += msg1.docs[0].author_name[i] + "<br>";
             }
-            document.getElementById("Author").innerHTML = "Author Name: " + authorlist;
+            document.getElementById("Author").innerHTML =  authorlist;
             document.getElementById("Title").innerHTML = "Book Title: " + title; 
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
             document.getElementById("BookCover").innerHTML = CoverImage; 
