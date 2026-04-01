@@ -44,7 +44,7 @@ async function ShowResults(){
             let title = msg1.docs[0].title; 
             let first_publish_year = msg1.docs[0].first_publish_year; 
            // let cover_i = msg1.docs[0].cover_i; 
-            let cover_edition_key = msg1.docs[1].cover_edition_key; 
+            let cover_edition_key = msg1.docs[0].cover_edition_key; 
 
             let CoverImage = "https://covers.openlibrary.org/b/olid/" + cover_edition_key + "-L.jpg"
 
@@ -56,12 +56,25 @@ async function ShowResults(){
             document.getElementById("Title").innerHTML = "Book Title: " + title; 
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
             document.getElementById("BookCover").src = CoverImage; 
-
-            
+              
 
           }
         
+        //   else {
 
+
+        // alert("Data not found"); 
+        //  return
+        
+        //   }
+
+        //     if (cover_edition_key == "")
+
+        //         document.getElementById("BookCover").src = document.getElementById("CoverError"); 
+
+        //      
+
+        
             
 
     }     
