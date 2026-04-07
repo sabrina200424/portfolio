@@ -40,7 +40,9 @@ async function ShowResults(){
             const msg1JSONText = await msg1Object.text(); 
             const msg1 = JSON.parse(msg1JSONText);
 
-            let author_name = msg1.docs[0].author_name[0]; 
+            let author_name_one = msg1.docs[0].author_name[0]; 
+            let author_name_two = msg1.docs[0].author_name[1];
+            let author_name_three = msg1.docs[0].author_name[2];
             let title = msg1.docs[0].title; 
             let first_publish_year = msg1.docs[0].first_publish_year; 
            // let cover_i = msg1.docs[0].cover_i; 
@@ -48,11 +50,15 @@ async function ShowResults(){
 
             let CoverImage = "https://covers.openlibrary.org/b/olid/" + cover_edition_key + "-L.jpg"
 
-            let authorlist = "";
-            for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
-                authorlist += msg1.docs[0].author_name[i] + "<br>";
-            }
-            document.getElementById("Author").innerHTML =  authorlist;
+            // let authorlist = "";
+            // for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
+            //     authorlist += msg1.docs[0].author_name[i] + "<br>";
+            // }
+
+
+            document.getElementById("Author").innerHTML =  "Author One: " + author_name_one;
+            document.getElementById("AuthorTwo").innerHTML = "Author Two: " + author_name_two;
+            document.getElementById("AuthorThree").innerHTML = "Author Three: " + author_name_three;
             document.getElementById("Title").innerHTML = "Book Title: " + title; 
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
             document.getElementById("BookCover").src = CoverImage; 
@@ -60,13 +66,14 @@ async function ShowResults(){
 
           }
         
-        //   else {
-
-
-        // alert("Data not found"); 
-        //  return
         
-        //   }
+        else if (msg1Object.status == 400){
+
+
+         alert("Server error"); 
+         return
+        
+           }
 
         //     if (cover_edition_key == "")
 

@@ -78,7 +78,39 @@ alert{
 
 
 #Author{
-    margin: 15px; 
+    margin-top: 30px; 
     padding: 20px;
     font-size: 18px;
+}
+
+#AuthorTwo{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+#AuthorThree{
+    display: flex; 
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+#Title{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+#PublishedYear{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+img{
+    margin-bottom: 10px;
 }
