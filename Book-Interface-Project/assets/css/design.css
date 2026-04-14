@@ -113,4 +113,9 @@ alert{
 
 img{
     margin-bottom: 10px;
+    border: none;
+}
+
+#FetchedImage{
+    border-color: #faeed5;
 }

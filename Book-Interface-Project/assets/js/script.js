@@ -61,7 +61,7 @@ async function ShowResults(){
             document.getElementById("AuthorThree").innerHTML = "Author Three: " + author_name_three;
             document.getElementById("Title").innerHTML = "Book Title: " + title; 
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
-            document.getElementById("BookCover").src = CoverImage; 
+            document.getElementById("RetrievedImage").src = CoverImage; 
               
 
           }
@@ -118,7 +118,7 @@ async function ShowResults(){
             document.getElementById("AuthorThree").innerHTML = "Third Author's Name: " + author_name_three; 
             document.getElementById("Title").innerHTML = "Book Title: " + title; 
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
-            document.getElementById("AuthorImage").src = AuthorImage;
+            document.getElementById("RetrievedImage").src = AuthorImage;
            
 
             
@@ -139,18 +139,26 @@ async function ShowResults(){
             const msg1JSONText = await msg1Object.text(); 
             const msg1 = JSON.parse(msg1JSONText);
 
-            let author_name = msg1.docs[0].author_name[0]; 
+            let author_name_one = msg1.docs[0].author_name[0];
+            let author_name_two = msg1.docs[0].author_name[1];
+            let author_name_three = msg1.docs[0].author_name[2]; 
             let title = msg1.docs[0].title; 
             let first_publish_year = msg1.docs[0].first_publish_year;
 
-            let authorlist = "";
-            for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
-                authorlist += msg1.docs[0].author_name[i] + "<br>";
-            }
-            document.getElementById("Author").innerHTML = "Author name: " + authorlist;
+            let cover_edition_key = msg1.docs[0].cover_edition_key; 
+
+            let CoverImage = "https://covers.openlibrary.org/b/olid/" + cover_edition_key + "-L.jpg"
+
+            // let authorlist = "";
+            // for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
+            //     authorlist += msg1.docs[0].author_name[i] + "<br>";
+            // }
+            document.getElementById("Author").innerHTML = "First author's name: " + author_name_one;
+            document.getElementById("AuthorTwo").innerHTML = "Second author's name: " + author_name_two;
+            document.getElementById("AuthorThree").innerHTML = "Third author's name: " + author_name_three;
             document.getElementById("Title").innerHTML = "Book Title: " + title; 
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
-           
+            document.getElementById("RetrievedImage").src = CoverImage;
 
             
 
@@ -159,7 +167,17 @@ async function ShowResults(){
 
     if(textCount > 1)
     {
+        document.getElementById("BookTitle").value = ""; 
+        document.getElementById("AuthorName").value = ""; 
+        document.getElementById("GeneralSubject").value = ""; 
+        document.getElementById("Author").innerHTML = ""; 
+        document.getElementById("AuthorTwo").innerHTML = ""; 
+        document.getElementById("AuthorThree").innerHTML = ""; 
+        document.getElementById("Title").innerHTML = ""; 
+        document.getElementById("PublishedYear").innerHTML = ""; 
+        document.getElementById("RetrievedImage").src = "";
         alert("Please enter information in only one box"); 
+        
         return;
     }
 
@@ -217,10 +235,16 @@ function ClearForm() {
     //     myChart = null; 
     // } 
 
-    document.getElementById("Author").value =  "";
-    document.getElementById("Title").value = ""; 
-    document.getElementById("PublishedYear").value = ""; 
-    document.getElementById("BookCover").value = ""; 
+    document.getElementById("Author").innerHTML =  "";
+    document.getElementById("AuthorTwo").innerHTML = "";
+    document.getElementById("AuthorThree").innerHTML = "";
+    document.getElementById("Title").innerHTML = ""; 
+    document.getElementById("PublishedYear").innerHTML = ""; 
+
+
+    if (document.getElementById("RetrievedImage").src != ""){
+        document.getElementById("RetrievedImage").src = "";
+    }
 
 
 }
