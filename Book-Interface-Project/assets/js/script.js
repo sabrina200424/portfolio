@@ -98,17 +98,27 @@ async function ShowResults(){
             const msg1JSONText = await msg1Object.text(); 
             const msg1 = JSON.parse(msg1JSONText);
 
-            let author_name = msg1.docs[0].author_name[0]; 
+            let author_name_one = msg1.docs[0].author_name[0];
+            let author_name_two = msg1.docs[0].author_name[1];
+            let author_name_three = msg1.docs[0].author_name[2]; 
             let title = msg1.docs[0].title; 
             let first_publish_year = msg1.docs[0].first_publish_year;
+            let author_image = msg1.docs[0].author_key;
 
-            let authorlist = "";
-            for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
-                authorlist += msg1.docs[0].author_name[i] + "<br>";
-            }
-            document.getElementById("Author").innerHTML = "Author's Name: " + authorlist;
+            let AuthorImage = "https://covers.openlibrary.org/a/olid/" + author_image + "-M.jpg"
+            // let authorlist = "";
+            // for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
+            //     authorlist += msg1.docs[0].author_name[i] + "<br>";
+            // }
+
+
+
+            document.getElementById("Author").innerHTML = "First Author's Name: " + author_name_one;
+            document.getElementById("AuthorTwo").innerHTML = "Second Author's Name: " + author_name_two;
+            document.getElementById("AuthorThree").innerHTML = "Third Author's Name: " + author_name_three; 
             document.getElementById("Title").innerHTML = "Book Title: " + title; 
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
+            document.getElementById("AuthorImage").src = AuthorImage;
            
 
             
