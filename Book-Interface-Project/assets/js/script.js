@@ -44,11 +44,37 @@ async function ShowResults(){
             let author_name_two = msg1.docs[0].author_name[1];
             let author_name_three = msg1.docs[0].author_name[2];
             let title = msg1.docs[0].title; 
-            let first_publish_year = msg1.docs[0].first_publish_year; 
-           // let cover_i = msg1.docs[0].cover_i; 
+            let first_publish_year = msg1.docs[0].first_publish_year;
             let cover_edition_key = msg1.docs[0].cover_edition_key; 
+            
+            let key = msg1.docs[0].key;
 
             let CoverImage = "https://covers.openlibrary.org/b/olid/" + cover_edition_key + "-L.jpg"
+            
+            document.getElementById("Author").innerHTML =  "Author One: " + author_name_one;
+            document.getElementById("AuthorTwo").innerHTML = "Author Two: " + author_name_two;
+            document.getElementById("AuthorThree").innerHTML = "Author Three: " + author_name_three;
+            document.getElementById("Title").innerHTML = "Book Title: " + title; 
+            // document.getElementById("Summary").innerHTML = summary; 
+            document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
+            document.getElementById("RetrievedImage").src = CoverImage;
+
+            let information = "https://openlibrary.org" + key + ".json"
+            let msg2Object = await fetch(information); 
+
+         
+            const msg2JSONText = await msg2Object.text(); 
+            const msg2 = JSON.parse(msg2JSONText);
+            
+
+            let summary = msg2.description; 
+            
+            document.getElementById("Summary").innerHTML = "Summary: " + summary;
+            
+          
+            
+           // let cover_i = msg1.docs[0].cover_i; 
+            
 
             // let authorlist = "";
             // for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
@@ -56,12 +82,7 @@ async function ShowResults(){
             // }
 
 
-            document.getElementById("Author").innerHTML =  "Author One: " + author_name_one;
-            document.getElementById("AuthorTwo").innerHTML = "Author Two: " + author_name_two;
-            document.getElementById("AuthorThree").innerHTML = "Author Three: " + author_name_three;
-            document.getElementById("Title").innerHTML = "Book Title: " + title; 
-            document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
-            document.getElementById("RetrievedImage").src = CoverImage; 
+             
               
 
           }
@@ -75,11 +96,15 @@ async function ShowResults(){
         
            }
 
-        //     if (cover_edition_key == "")
 
-        //         document.getElementById("BookCover").src = document.getElementById("CoverError"); 
+        else {
 
-        //      
+            if (msg1Object.status == 404){
+                alert("The data you are looking for does not exist.")
+                return
+            }
+        }
+  
 
         
             
