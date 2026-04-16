@@ -97,14 +97,14 @@ alert{
     font-size: 18px;
 }
 
-#Title, #TitleTwo{
+#Title, #TitleTwo, #TitleThree{
     display: flex;
     justify-content: center;
     padding: 20px;
     font-size: 18px;
 }
 
-#PublishedYear, #PublishedYearTwo{
+#PublishedYear, #PublishedYearTwo, #PublishedYearThree{
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -113,14 +113,14 @@ alert{
 
 img{
     margin-bottom: 10px;
-    border: none;
+    
 }
 
 #RetrievedImage{
-    border-color: #faeed5;
+    border: 5px solid #faeed5;
 }
 
-#Summary, #SummaryTwo{
+#Summary, #SummaryTwo, #SummaryThree{
     font-size: 16px;
     margin-bottom: 20px;
     margin-left: 100px; 
