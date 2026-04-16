@@ -44,32 +44,46 @@ async function ShowResults(){
             let author_name_two = msg1.docs[0].author_name[1];
             let author_name_three = msg1.docs[0].author_name[2];
             let title = msg1.docs[0].title; 
+            let titletwo = msg1.docs[1].title;
             let first_publish_year = msg1.docs[0].first_publish_year;
-            let cover_edition_key = msg1.docs[0].cover_edition_key; 
+            let first_publish_year_two = msg1.docs[1].first_publish_year;
+            let cover_edition_key = msg1.docs[0].cover_edition_key;
+            let cover_edition_key_two = msg1.docs[1].cover_edition_key; 
             
             let key = msg1.docs[0].key;
+            let key_two = msg1.docs[1].key;
 
             let CoverImage = "https://covers.openlibrary.org/b/olid/" + cover_edition_key + "-L.jpg"
+            let CoverImageTwo = "https://covers.openlibrary.org/b/olid/" + cover_edition_key_two + "-L.jpg"
             
             document.getElementById("Author").innerHTML =  "Author One: " + author_name_one;
             document.getElementById("AuthorTwo").innerHTML = "Author Two: " + author_name_two;
             document.getElementById("AuthorThree").innerHTML = "Author Three: " + author_name_three;
             document.getElementById("Title").innerHTML = "Book Title: " + title; 
-            // document.getElementById("Summary").innerHTML = summary; 
+            document.getElementById("TitleTwo").innerHTML = "Second Book Title: " + titletwo;
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
+            document.getElementById("PublishedYearTwo").innerHTML = "First Published Year: " + first_publish_year_two;
             document.getElementById("RetrievedImage").src = CoverImage;
+            document.getElementById("RetrievedImageTwo").src = CoverImageTwo;
 
             let information = "https://openlibrary.org" + key + ".json"
             let msg2Object = await fetch(information); 
+
+            let information_two = "https://openlibrary.org" + key_two + ".json"
+            let msg3Object = await fetch(information_two);
 
          
             const msg2JSONText = await msg2Object.text(); 
             const msg2 = JSON.parse(msg2JSONText);
             
+            const msg3JSONText = await msg3Object.text();
+            const msg3 = JSON.parse(msg3JSONText);
 
             let summary = msg2.description; 
+            let summary_two = msg3.description;
             
             document.getElementById("Summary").innerHTML = "Summary: " + summary;
+            document.getElementById("SummaryTwo").innerHTML = "Summary: " + summary_two;
             
           
             
@@ -264,11 +278,19 @@ function ClearForm() {
     document.getElementById("AuthorTwo").innerHTML = "";
     document.getElementById("AuthorThree").innerHTML = "";
     document.getElementById("Title").innerHTML = ""; 
+    document.getElementById("TitleTwo").innerHTML = ""; 
     document.getElementById("PublishedYear").innerHTML = ""; 
+    document.getElementById("PublishedYearTwo").innerHTML = "";
+    document.getElementById("Summary").innerHTML = ""; 
+    document.getElementById("SummaryTwo").innerHTML = ""; 
 
 
     if (document.getElementById("RetrievedImage").src != ""){
         document.getElementById("RetrievedImage").src = "";
+    }
+
+    if (document.getElementById("RetrievedImageTwo").src != ""){
+        document.getElementById("RetrievedImageTwo").src = ""; 
     }
 
 

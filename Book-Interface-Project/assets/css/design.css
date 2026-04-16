@@ -97,14 +97,14 @@ alert{
     font-size: 18px;
 }
 
-#Title{
+#Title, #TitleTwo{
     display: flex;
     justify-content: center;
     padding: 20px;
     font-size: 18px;
 }
 
-#PublishedYear{
+#PublishedYear, #PublishedYearTwo{
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -116,6 +116,15 @@ img{
     border: none;
 }
 
-#FetchedImage{
+#RetrievedImage{
     border-color: #faeed5;
+}
+
+#Summary, #SummaryTwo{
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 100px; 
+    margin-right: 100px;
+    padding: 20px;
+    border: 2px solid #815738; 
 }
