@@ -236,11 +236,14 @@ async function ShowResults(){
         document.getElementById("AuthorTwo").innerHTML = ""; 
         document.getElementById("AuthorThree").innerHTML = ""; 
         document.getElementById("Title").innerHTML = "";
-        document.getElementById("TitleTwo").innerHTML = ""; 
+        document.getElementById("TitleTwo").innerHTML = "";
+        document.getElementById("TitleThree").innerHTML = "";
         document.getElementById("PublishedYear").innerHTML = ""; 
         document.getElementById("PublishedYearTwo").innerHTML = ""; 
+        document.getElementById("PublishedYearThree").innerHTML = "";
         document.getElementById("RetrievedImage").src = "";
         document.getElementById("RetrievedImageTwo").src = ""; 
+        document.getElementById("RetrievedImageThree").src = ""; 
         alert("Please enter information in only one box"); 
         
         return;
@@ -305,10 +308,13 @@ function ClearForm() {
     document.getElementById("AuthorThree").innerHTML = "";
     document.getElementById("Title").innerHTML = ""; 
     document.getElementById("TitleTwo").innerHTML = ""; 
+    document.getElementById("TitleThree").innerHTML = ""; 
     document.getElementById("PublishedYear").innerHTML = ""; 
     document.getElementById("PublishedYearTwo").innerHTML = "";
+    document.getElementById("PublishedYearThree").innerHTML = "";
     document.getElementById("Summary").innerHTML = ""; 
     document.getElementById("SummaryTwo").innerHTML = ""; 
+    document.getElementById("SummaryThree").innerHTML = "";
 
 
     if (document.getElementById("RetrievedImage").src != ""){
@@ -319,6 +325,9 @@ function ClearForm() {
         document.getElementById("RetrievedImageTwo").src = ""; 
     }
 
+    if (document.getElementById("RetrievedImageThree").src != ""){
+        document.getElementById("RetrievedImageThree").src = ""; 
+    }
 
 }
 
