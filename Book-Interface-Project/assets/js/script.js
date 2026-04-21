@@ -96,6 +96,10 @@ async function ShowResults(){
             let summary = msg2.description; 
             let summary_two = msg3.description;
             let summary_three = msg4.description; 
+
+            // if (msg2.description = ""){
+            //     let summary = msg2.description.value;
+            // }
             
             document.getElementById("Summary").innerHTML = "Summary: " + summary;
             document.getElementById("SummaryTwo").innerHTML = "Summary: " + summary_two;
@@ -157,10 +161,20 @@ async function ShowResults(){
             let author_name_two = msg1.docs[1].author_name[0];
             let author_name_three = msg1.docs[2].author_name[0]; 
             let title = msg1.docs[0].title; 
+            let titletwo = msg1.docs[1].title;
+            let titlethree = msg1.docs[2].title;
             let first_publish_year = msg1.docs[0].first_publish_year;
+            let first_publish_year_two = msg1.docs[1].first_publish_year;
+            let first_publish_year_three = msg1.docs[2].first_publish_year; 
             let author_image = msg1.docs[0].author_key;
+            let author_image_two = msg1.docs[1].author_key;
+            let author_image_three = msg1.docs[2].author_key;
 
             let AuthorImage = "https://covers.openlibrary.org/a/olid/" + author_image + "-M.jpg"
+            let AuthorImageTwo = "https://covers.openlibrary.org/a/olid/" + author_image_two + "-M.jpg"
+            let AuthorImageThree = "https://covers.openlibrary.org/a/olid/" + author_image_three + "-M.jpg"
+
+
             // let authorlist = "";
             // for (let i = 0; i < msg1.docs[0].author_name.length; i++) {
             //     authorlist += msg1.docs[0].author_name[i] + "<br>";
@@ -172,8 +186,15 @@ async function ShowResults(){
             document.getElementById("AuthorTwo").innerHTML = "Second Author's Name: " + author_name_two;
             document.getElementById("AuthorThree").innerHTML = "Third Author's Name: " + author_name_three; 
             document.getElementById("Title").innerHTML = "Book Title: " + title; 
+            document.getElementById("TitleTwo").innerHTML = "Book Title: " + titletwo; 
+            document.getElementById("TitleThree").innerHTML = "Book Title: " + titlethree;
             document.getElementById("PublishedYear").innerHTML = "First Published Year: " + first_publish_year; 
+            document.getElementById("PublishedYearTwo").innerHTML = "First Published Year: " + first_publish_year_two; 
+            document.getElementById("PublishedYearThree").innerHTML = "First Published Year: " + first_publish_year_three; 
             document.getElementById("RetrievedImage").src = AuthorImage;
+            document.getElementById("RetrievedImageTwo").src = AuthorImageTwo;
+            document.getElementById("RetrievedImageThree").src = AuthorImageThree;
+
            
 
             
