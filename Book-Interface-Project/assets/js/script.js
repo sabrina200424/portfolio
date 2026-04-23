@@ -94,20 +94,69 @@ async function ShowResults(){
             const msg4 = JSON.parse(msg4JSONText); 
 
             let summary = msg2.description; 
+            let summary_type_one = typeof(summary)
+           // let mydesc = msg2.description.value;
             let summary_two = msg3.description;
+            let summary_type_two = typeof(summary_two)
             let summary_three = msg4.description; 
+            let summary_type_three = typeof(summary_three)
 
-            // if (msg2.description = ""){
-            //     let summary = msg2.description.value;
-            // }
+
+            if (summary_type_one = "object"){
+                 let summary = msg2.description.value;
+                document.getElementById("Summary").innerHTML = "Summary: " + summary;
+             }
+
+            else if (summary_type_one = "string") {
+                  let summary = msg2.description; 
+                    document.getElementById("Summary").innerHTML = "Summary: " + summary; 
+                }
+
+             else if (summary_type_one = undefined){
+              document.getElementById("Summary").innerHTML = "Summary not found."; 
+              }
+
+
+            if (summary_type_two = "object"){
+                 let summary_two = msg3.description.value;
+                document.getElementById("SummaryTwo").innerHTML = "Summary: " + summary_two;
+             }
+
+            else if (summary_type_two = "string") {
+                  let summary_two = msg3.description; 
+                    document.getElementById("SummaryTwo").innerHTML = "Summary: " + summary_two; 
+                }
+
+             else if (summary_type_two = undefined){
+              document.getElementById("SummaryTwo").innerHTML = "Summary not found."; 
+              }
             
-            document.getElementById("Summary").innerHTML = "Summary: " + summary;
-            document.getElementById("SummaryTwo").innerHTML = "Summary: " + summary_two;
-            document.getElementById("SummaryThree").innerHTML = "Summary: " + summary_three;
+
+
+            if (summary_type_three = "object"){
+                 let summary_three = msg4.description.value;
+                document.getElementById("SummaryThree").innerHTML = "Summary: " + summary_three;
+             }
+
+            else if (summary_type_three = "string") {
+                  let summary_three = msg4.description; 
+                    document.getElementById("SummaryThree").innerHTML = "Summary: " + summary_three; 
+                }
+
+             else if (summary_type_three = undefined){
+              document.getElementById("SummaryThree").innerHTML = "Summary not found."; 
+              }
+            
+
+
+
+            
+            // document.getElementById("Summary").innerHTML = "Summary: " + summary;
+           // document.getElementById("SummaryTwo").innerHTML = "Summary: " + summary_two;
+          //  document.getElementById("SummaryThree").innerHTML = "Summary: " + summary_three;
             
           
             
-           // let cover_i = msg1.docs[0].cover_i; 
             
 
             // let authorlist = "";
@@ -122,20 +171,11 @@ async function ShowResults(){
           }
         
         
-        else if (msg1Object.status == 400){
-
-
-         alert("Server error"); 
-         return
-        
-           }
-
 
         else {
-
-            if (msg1Object.status == 404){
-                alert("The data you are looking for does not exist.")
-                return
+            if (msg1Object.status != 200 || msg1Object.status < 200 || msg1Object.status != 299 || msg1Object.status > 299) {
+            alert("The data you are looking for does not exist." + msg1Object.status)
+            return;
             }
         }
   
