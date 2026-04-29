@@ -248,6 +248,23 @@ async function ShowResults(){
             document.getElementById("RetrievedImageTwo").src = AuthorImageTwo;
             document.getElementById("RetrievedImageThree").src = AuthorImageThree;
 
+
+            const msg2JSONText = await msg2Object.text(); 
+            const msg2 = JSON.parse(msg2JSONText);
+            
+            const msg3JSONText = await msg3Object.text();
+            const msg3 = JSON.parse(msg3JSONText);
+
+            const msg4JSONText = await msg4Object.text();
+            const msg4 = JSON.parse(msg4JSONText); 
+
+            let summary = msg2.description; 
+            let summary_type_one = typeof(summary)
+            let summary_two = msg3.description;
+            let summary_type_two = typeof(summary_two)
+            let summary_three = msg4.description; 
+            let summary_type_three = typeof(summary_three)
+
            if (summary_type_one = "object"){
                  let summary = msg2.description.value;
                 document.getElementById("Summary").innerHTML = "Summary: " + summary;
@@ -372,6 +389,22 @@ async function ShowResults(){
             document.getElementById("RetrievedImageTwo").src = CoverImageTwo;
             document.getElementById("RetrievedImageThree").src = CoverImageThree;
 
+
+            const msg2JSONText = await msg2Object.text(); 
+            const msg2 = JSON.parse(msg2JSONText);
+            
+            const msg3JSONText = await msg3Object.text();
+            const msg3 = JSON.parse(msg3JSONText);
+
+            const msg4JSONText = await msg4Object.text();
+            const msg4 = JSON.parse(msg4JSONText); 
+
+            let summary = msg2.description; 
+            let summary_type_one = typeof(summary)
+            let summary_two = msg3.description;
+            let summary_type_two = typeof(summary_two)
+            let summary_three = msg4.description; 
+            let summary_type_three = typeof(summary_three)
 
             if (summary_type_one = "object"){
                  let summary = msg2.description.value;
