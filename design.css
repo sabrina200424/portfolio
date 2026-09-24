@@ -1,21 +1,49 @@
  
-.container {
-   
-    max-width: 1300px;
-    /* margin: 20px auto; */
-  }
+:root{
+  --body-background-color: #fff0f3; 
+  --second-background-color: #ffdbe2; /* ffe2e8*/
+  --third-background-color: #fff7e0; 
+  --second-yellow-color: #fceec9;
+  --heading-color-maroon: #7c131a;
+  --first-red-color: #840c1c;
+  --second-red-color: #8f1525; 
+  --first-pink-color: #a13140; 
+  --second-pink-color: #c75463;
+  --third-pink-color: #E64A6C; 
+  --fourth-pink-color: #fccce2; 
+  --first-brown-color: #653c26;
+  --second-brown-color: #7e4923; 
+  --third-brown-color: #BD7E51; 
+  --first-text-color: #ffff; 
+}
+
+
+
+
   
  body{
-   background-color: #fff0f3;
+   background-color: var(--body-background-color);
    font-family:Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 
+
+  main{
+    background-color: var(--second-background-color);
+    width: 1076px; 
+    margin: 10px auto; 
+    display: grid; 
+    grid-template-columns: (12, 1fr);
+    grid-template-rows: auto;
+    gap: 20px; 
+    padding: 20px;
+  }
+
+  
   
  .title{
   display: flex;
   justify-content: center;
-  
   font-size: 38px;
    
  }
@@ -23,31 +51,39 @@
  
 
 .heading{
-   background-color: #ffc2d9;         
-   color: #911802; 
-   margin-top: 2px;
-   padding-top: 40px;
-   padding-bottom: 35px;
-   padding-left: 7px;
-   padding-right: 7px; 
-   border-radius: 14px;
-   display: flex; 
-   justify-content: center;
+   background-color: var(--heading-color-maroon);         
+   color: var(--third-background-color); 
+   grid-column-start: 1;
+   grid-column-end: 13; 
+   grid-row-start: 1;
+   grid-row-end: 2; 
+   padding: 20px;
+   border-radius: 2px;
 }
 
 
 .tabs{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
   display:flex;
   justify-content: space-evenly;
-  background-color: #7c131a;
+  background-color: var(--first-brown-color);
+  margin-top: -20px;
 }
 
 .tabopen{
   
-  color:#ffffff;
-  background-color: #7c131a;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  color:var(--third-background-color);
+  background-color: var(--first-brown-color);
   text-decoration: none;
   font-size: 16px; 
+  font-weight: 600;
   padding: 20px; 
   border-radius: 14px;
 
@@ -56,7 +92,7 @@
 
 
 .tabopen:hover{
-  background-color: #c9184A; 
+  background-color: var(--second-red-color); 
 }
 
 
@@ -65,82 +101,68 @@
 }
 
 
- .firstrectangle{
-   height: 50px; 
-   width: 180px; 
-   background-color: #1a60a1; /*B9DC5F*//*fdb3b2e3*/  /*87a330 - olive green*/
-   transform: rotate(138deg);
-   /* background-position: 14px;
-   position:relative;  */
-   margin-top: -720px; 
-   margin-left: -31px; 
-   float:left; 
-
-   
-   /* 8d0a36 - magenta*/
-   /* lilac - f1b3ff*/
-   /*orange - FFAA33 */ 
-   /*magenta - #985277*/
-}
-
-
-.secondrectangle{
-   height: 50px; 
-   width: 180px; 
-   background-color: #0d5d85; /*B9DC5F*//*fdb3b2e3*/ 
-   transform: rotate(138deg);
-   float:right;
-
-}
-
 
 
 .introduction{
    
-   
-   background-color: #fccce2;
-   color: #911802;
+   grid-column-start: 5;
+   grid-column-end: 13;
+   grid-row-start: 5;
+   grid-row-end: 6;
+   background-color: var(--fourth-pink-color);
+   color: var(--first-red-color);
    border: 4px dashed #a1073d; 
    border-radius: 3px;
-   margin-top: 81px;
-   margin-left: 450px;
-   margin-right: 100px;
-   padding-top: 40px;
-   padding-right: 80px;
-   padding-left: 80px;
-   padding-bottom: 40px;
    font-size: 15px;
+   font-weight: 600;
+   padding: 20px;
    
 }
 
 
 
-  
-
   .image {
+  
+   grid-column-start: 1;
+   grid-column-end: 5; 
+   grid-row-start: 5;
+   grid-row-end: 6; 
    height: 300px; 
    width: 300px; 
    border: 5px dotted #a1073d;
-   float: left; 
-   margin-left: 45px;
-   margin-top: 60px; 
+  
    
   }
 
-  
+  h3{
+  grid-column-start: 6;
+  grid-column-end: 10;
+  grid-row-start: 7;
+  grid-row-end: 8; 
+  color: #a13140; 
+  font-size: 25px;
+}
 
 
   .skillset{
+   grid-column-start: 1;
+   grid-column-end: 13;
+   grid-row-start: 9;
+   grid-row-end: 10;
    display: flex;
    flex-direction: row;
    justify-content: space-evenly;
    list-style-type: none; 
-   background-color: #c75463;
-   margin-left: 120px; 
-   margin-right: 120px;
+   background-color: var(--second-pink-color);
+   border-radius: 6px;
+   margin-top: -20px;
  }
 
  .skillset li{
+   grid-column-start: 1;
+   grid-column-end: 13;
+   grid-row-start: 9;
+   grid-row-end: 10;
    color: #ffffff;
    background-color: #a13140;
    padding-right: 6px;
@@ -148,53 +170,46 @@
    padding-top: 6px;
    padding-bottom: 6px;
    border-radius: 4px;
-   border: 2px inset #95192a; 
+   border: 2px inset var(--first-pink-color); 
    margin-top: 26px; 
    margin-bottom: 26px;
+   font-size: 16px;
+   font-weight: 500;
  }
 
  .skillset li:hover{
   box-shadow: 5px 5px #840c1c;
  }
 
- h3{
-  display: flex;
-  justify-items: center;
-  margin-left: 560px;
-  margin-top: 120px;
-  color: #a13140; 
-  font-size: 25px;
-}
+ 
   
 h4{
   display: flex; 
   justify-items: center; 
-  padding-top: 20px;
-  margin-left: 564px;
-  margin-top: 90px; 
-  color: #ffd7dc; /*d66413*/
+  grid-column-start: 6;
+  grid-column-end: 10; 
+  grid-row-start: 11;
+  grid-row-end: 12;
+  color: var(--first-brown-color); /*d66413*/
   font-size: 25px; 
+  
 
 }
 
 
-.contact-information{
-  background-color:#7c131a;
-  margin-right: -10px;
-  margin-bottom: -10px;
-  padding-bottom: 8px;
- }
 
 
 #contact-info{
-  display: flex; 
-  justify-items: center;
-  color: #ffffff; 
-  margin-left: -10px; 
-  padding-right: 20px; 
-  padding-left: 60px;  
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  color: var(--third-background-color); 
+  background-color: var(--first-brown-color);
   font-size: 17px;
-  
+  font-weight: 600;
+  padding: 40px;
+  margin: -20px;
 }
 
 #contact-info a{
@@ -203,28 +218,3 @@ h4{
 
 
  
-
-  
- 
-
-
-
-
-
-/* background colors
-
-b75d69 - Orchid purple
-e5989b - Pink purple
-ffbf69   ff9b54  ffd48f- Peach
-ff8c61 - Salmon pink
-
-
-rectangle colors
-
-#b35d8a - purple
-#023047 - navy blue
-
-#d46103 - dark orange (for heading) 
-
-
-*/

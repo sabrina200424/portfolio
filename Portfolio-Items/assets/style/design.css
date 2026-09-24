@@ -1,43 +1,77 @@
 
-.container{
-    max-width: 1300px;
-    /* margin: 80px auto; 
-    margin-top: 30px; */
+
+:root{
+    --body-background-color: #fff0f3; 
+    --second-background-color: #ffdbe2; 
+    --third-background-color: #fff7e0; 
+    --second-yellow-color: #fceec9; 
+    --heading-color-maroon: #7c131a; 
+    --first-red-color: #840c1c; 
+    --second-red-color: #8f1525; 
+    --first-pink-color: #a13140; 
+    --second-pink-color: #c75463; 
+    --third-pink-color: #E64A6C; 
+    --fourth-pink-color: #fccce2; 
+    --first-brown-color: #653c26; 
+    --second-brown-color: #7e4923; 
+    --third-brown-color: #BD7E51; 
+    --first-text-color: #ffff; 
 }
 
 
 body{
-    background-color: #fff0f3;
+    background-color: var(--body-background-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+main{
+    background-color: var(--second-background-color);
+    width: 1076px; 
+    margin: 10px auto; 
+    display: grid;
+    grid-template-columns: (12, 1fr);
+    grid-template-rows: auto;
+    gap: 20px; 
+    padding: 20px; 
+
+}
+
 .heading{
-    background-color: #ffc2d9;
-    color: #911802; 
-    padding-top: 40px;
-    padding-bottom: 35px;
-    padding-right: 7px;
-    padding-left: 7px; 
-    border-radius: 14px; 
-    display: flex; 
-    justify-content: center;
+    background-color: var(--heading-color-maroon);
+    color: var(--third-background-color); 
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 .title{
+    display: flex;
+    justify-content: center;
     font-size: 38px;
 }
 
 
 .tabs{
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 3;
     display: flex;
     justify-content: space-evenly;
-    background-color: #7c131a;
+    background-color: var(--first-brown-color);
+    margin-top: -20px;
 }
 
 
 .tabopen{
-    background-color: #7c131a;
-    color: #ffffff;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: var(--third-background-color);
+    background-color: var(--first-brown-color);
     text-decoration: none;
     font-size: 16px; 
     padding: 20px; 
@@ -45,7 +79,7 @@ body{
 }
 
 .tabopen:hover{
-    background-color: #c9184A; 
+    background-color: var(--second-red-color); 
 }
 
 .tabopen:active{
@@ -207,43 +241,41 @@ ul{
 /* Start of resume section */
 
 .resume-format{
-  display: flex; 
-  justify-content: left;
-  background-color: #14213d;
-  border: 3px double #4664a5;
-  margin-top: 60px;
-  margin-left: 60px;
-  margin-right: 60px;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: var(--first-brown-color);
+  border: 3px double var(--third-brown-color);
+  color: var(--third-background-color);
   padding-top: 20px;
   padding-left: 10px;
   padding-bottom: 20px;
-  color:#ffffff; 
   font-size: 14px;
+  margin-right: 100px;
 }
 
 .resume-format a{
-    color:#ccbaff;
+    color: var(--second-background-color);
 }
 
 .resume{
-    
-
-  background-color: #14213d;
-  border: 3px double #4664a5;
-  margin-top: 0px;
-  margin-left: 60px;
-  margin-right: 60px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px; 
-  padding-right: 20px;
-  color:#ffffff; 
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 5; 
+  background-color: var(--first-brown-color);
+  border: 3px double var(--second-brown-color);
+  color: var(--third-background-color);
+  padding: 20px;
+  margin-right: 200px;
 }
 
 .resume-title{
     display: flex;
     justify-content: center;
     font-size: 20px;
+    margin-right: 100px;
 }
 
 
